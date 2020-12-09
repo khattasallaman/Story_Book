@@ -1,0 +1,35 @@
+{{!-- <nav class="gray ">
+    <div class="nav-wrapper container ">
+        <a href="#!" class="brand-logo right">StoryBooks</a>
+        <a href="#" class="sidenav-trigger show-on-large" data-targe="mobile-demo" ><i class="fas fa-bars"></i></a>
+        <ul class="sidenav hide-on-med-and-down" id="mobile-demo">
+            <li><a href="/stories">Public Stories</a></li>
+            <li><a href="/dashboard">Dashboard</a></li>
+            <li><a href="/auth/logout">Logout</a></li>
+        </ul>
+    </div>
+</nav> --}}
+
+ 
+<nav class="navbar navbar-expand-sm navbar-dark bg-secondary">
+  <a class="navbar-brand" href="/stories"><i class="fas fa-book-reader fa-bg"></i></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a  class="nav-link" href="/dashboard">Dashboard <span class="sr-only"></span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/stories">Public Stories</a>
+      </li>
+      <li class="nav-item " >
+        <a class="nav-link" href="/stories/privates">Private Stories</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/auth/logout">Logout</a>
+      </li>
+    </ul>
+  </div>
+</nav>

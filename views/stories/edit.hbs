@@ -1,0 +1,32 @@
+<h4>Add Story</h4>
+
+<form class="mt-3" action="/stories/{{story._id}}" method="POST">
+<input type="hidden" name="_method" value="PUT"/>
+    <div class="form-group">
+        <label for="title">Title</label>
+        <input name="title" type="text" class="form-control" id="title" placeholder="Your Story Title" value="{{story.title}}"/>
+    </div>
+    <div class="form-group">
+    <label for="status">Status</label>
+    <select id="status" name="status" class="form-control">
+        {{#select story.status}}
+        <option value="public">Public</option>
+        <option value="private">Private</option>
+        {{/select}}
+    </select>
+    </div>
+    <div class="form-group d-flex flex-column">
+        <label for="body">Tell Us Your Story</label>
+        <textarea name="body" id="body" class="">{{story.body}}</textarea>
+    </div>
+    <div class="form-group row">
+        <div class="col-sm-10">
+            <button type="submit" class="btn btn-primary"><span class="text-primary">Save</span></button>
+            <button type="button" class="btn btn-primary"><a href="/dashboard" style="text-decoration: none;">Cancel</a></button>
+
+            
+        </div>
+  </div>
+
+  
+</form>

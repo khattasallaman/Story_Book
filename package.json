@@ -1,0 +1,35 @@
+{
+  "name": "storybook",
+  "version": "1.0.0",
+  "description": "create stories",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "Khatta Sallaman",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "bootstrap-material-design": "^4.1.1",
+    "connect-mongo": "^3.2.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.1.0",
+    "express-session": "^1.17.1",
+    "font-awesome": "^4.7.0",
+    "handlebars-form-helpers": "^0.1.4",
+    "materialize": "^1.0.0",
+    "materialize-css": "^1.0.0-rc.2",
+    "method-override": "^3.0.0",
+    "moment": "^2.27.0",
+    "mongoose": "^5.10.0",
+    "morgan": "^1.10.0",
+    "passport": "^0.4.1",
+    "passport-google-oauth20": "^2.0.0",
+    "session-file-store": "^1.4.0"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.2",
+    "nodemon": "^2.0.4"
+  }
+}

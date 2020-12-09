@@ -1,0 +1,43 @@
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-sm-8">
+            <div class="card mt-1">
+                    {{#if (eq userId storyUserId)}} 
+                <div class="card-header d-flex justify-content-between pb-0">
+                    <small>{{{editIcon story.user user story._id}}}
+                    </small>
+                    <div >
+                        <form action="/stories/{{story._id}}" method="POST" style="margin-bottom:0">
+                            <input type="hidden" value="DELETE" name="_method">
+                            <button type="submit" class="btn btn-danger btn-sm float-right"> <i class="fas fa-trash"></i></button>
+                         </form>
+                    </div>
+                         
+                </div>
+                         {{/if}}
+                <div class="card-body">
+                    <div class="card-title">
+                        <h4>{{story.title}}</h4>
+                    </div>
+                    <div class="card-subtitle">
+                        <h6>{{formateDate date "MMMM Do YYYY"}}</h6>
+                    </div>
+                    <div class="card-text">
+                        {{stripTags story.body}}
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="col-12 col-sm-4 d-flex justify-content-center align-items-start" style="max-height=40px">
+            <div class="card mt-1 w-100" >
+                <div class="card-body">
+                    <h6 style="color: rgb(108, 117, 125);"> <u>{{story.user.displayName}}</u></h6>
+                    <a href="/stories/user/{{story.user._id}}" class="btn btn-primary btn-sm text-capitalize">More From {{story.user.firstName}}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

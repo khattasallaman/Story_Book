@@ -1,0 +1,38 @@
+<div class="container">
+      <h3 class="my-2">Welcome {{name}} :-</h3>
+    {{#if stories}}
+    <h5 class="my-3">Here Are Your Stories :</h5>
+      <div class="table-responsive">
+            <table class="table table-striped ">
+          <thead>
+            <tr class="bg-light">
+              <th scope="col">Title</th>
+              <th scope="col">Date</th>
+              <th scope="col">Status</th>
+              <th scope="col">Edit</th>
+              <th scope="col">Delete</th>
+            </tr>
+          </thead>
+          <tbody>
+              {{#each stories}}
+            <tr>
+              <td><a href="/stories/{{_id}}">{{title}}</a></td>
+              <td>{{formateDate createdAt "MMMM Do YYYY, h:mm:ss a"}}</td>
+              <td><span class="dash-status">{{status}}</span></td>
+              <td><a href="stories/edit/{{_id}}" class="btn btn-primary"><i class="fas fa-edit"></i></a></td>
+              <td>
+                <form action="stories/{{_id}}" method="POST">
+                <input type="hidden" name="_method" value="DELETE">
+                <button type="submit" class="btn btn-danger"><i class="fas fa-trash"></i></button>
+              </form>
+              </td>
+            </tr>
+            {{/each}}
+          </tbody>
+        </table>
+      </div>
+      
+    {{else}}
+        <h3>You do not have any story yet, please add one</h3>
+    {{/if}}  
+</div>

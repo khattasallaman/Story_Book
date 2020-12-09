@@ -1,0 +1,25 @@
+<h2 class="py-3"><u>{{#if froUser }} {{user.displayName}}  {{else}}  Public Stories{{/if}} </u> </h2>
+<div class="row d-flex justify-content-center">
+    {{#each stories}}
+        <div class="ml-2 mb-2">
+            <div class="card" style="height:300px;width:230px"> 
+                <div class="card-img d-flex justify-content-between">
+                    <div class="mt-1 ml-1">{{{editIcon user ../user _id}}}</div>
+                    <div class="mt-1 mr-1">{{{delIcon user ../user _id false}}}</div>
+                   {{{userN user ../user _id}}}
+                </div>
+                <div class="card-body pt-2">
+                    <div class="card-title"><h4><u>{{truncate title 20}}</u> </h4></div>
+                    <div class="card-text">{{ truncate (stripTags body) 120}}</div>
+                   
+                </div>
+                <div class="card-footer">
+                     
+                    <a href="/stories/{{_id}}" class="btn btn-light bg-secondary btn-sm text-capitalize">Read More</a>
+                </div>
+            </div>
+        </div>
+    {{else}}
+        <h1>No story to display</h1>
+    {{/each}}
+</div>
